@@ -21,55 +21,45 @@ namespace DogSheet
     /// </summary>
     public partial class TableDataWindow : Window
     {
-        Excel.Application app = new Excel.Application();
-        Excel.Workbook workbook;
-        AddDataWindow ADW = new AddDataWindow();
+        private Excel.Application TDWapp;
+        private Excel.Workbook TDWworkbook;
+        private Excel.Worksheet TDWworksheet;
+        private string[] data = new string[18];
+        private AddDataWindow ADW = new AddDataWindow();
         
-
-        public TableDataWindow()
+        public TableDataWindow(Excel.Application app, Excel.Workbook workbook, Excel.Worksheet worksheet, Excel.Range startRng)
         {
             InitializeComponent();
-            //if (workbook == null)
-            //    workbook = app.Workbooks.Open(@"C:\Users\pshar\source\repos\DogSheet\Журнал отлова безнадзорных животных.xlsx");
-        }
-
-        public TableDataWindow(Excel.Range startRng)
-        {
-            workbook = app.Workbooks.Open(@"C:\Users\pshar\source\repos\DogSheet\Журнал отлова безнадзорных животных.xlsx");
-            Excel.Worksheet worksheet = workbook.Sheets[1];
-            //TableWork TW = new TableWork(worksheet);
-            //TW.GetRow(startRng, NumberTextbox.Text, CuratorTextbox.Text, PhoneTextbox.Text, CatchPlaceTextbox.Text, TypeTextbox.Text, ColorTextbox.Text,
-            //AdditionalTextbox.Text, PregnantTextbox.Text, TraumaTextbox.Text, StPlaceTextbox.Text, StDateTextbox.Text, MarkTextbox.Text, LabelTextbox.Text, 
-            //VacTextbox.Text, VacDateTextbox.Text, AwayTextbox.Text, AwayDateTextbox.Text);
-            int row = startRng.Row;
-            NumberTextbox.Text = worksheet.Cells[row, 1].Value2.ToString();
-            CuratorTextbox.Text = worksheet.Cells[row, 2].Value2.ToString();
-            PhoneTextbox.Text = worksheet.Cells[row, 3].Value2.ToString();
-            CatchPlaceTextbox.Text = worksheet.Cells[row, 4].Value2.ToString();
-            TypeTextbox.Text = worksheet.Cells[row, 5].Value2.ToString();
-            ColorTextbox.Text = worksheet.Cells[row, 6].Value2.ToString();
-            AdditionalTextbox.Text = worksheet.Cells[row, 7].Value2.ToString();
-            PregnantTextbox.Text = worksheet.Cells[row, 8].Value2.ToString();
-            TraumaTextbox.Text = worksheet.Cells[row, 9].Value2.ToString();
-            StPlaceTextbox.Text = worksheet.Cells[row, 10].Value2.ToString();
-            StDateTextbox.Text = worksheet.Cells[row, 11].Value2.ToString();
-            MarkTextbox.Text = worksheet.Cells[row, 12].Value2.ToString();
-            LabelTextbox.Text = worksheet.Cells[row, 13].Value2.ToString();
-            VacTextbox.Text = worksheet.Cells[row, 14].Value2.ToString();
-            VacDateTextbox.Text = worksheet.Cells[row, 15].Value2.ToString();
-            AwayTextbox.Text = worksheet.Cells[row, 16].Value2.ToString(); ;
-            AwayDateTextbox.Text = worksheet.Cells[row, 17].Value2.ToString();
-            Console.WriteLine(NumberTextbox.Text, CuratorTextbox.Text, PhoneTextbox.Text, CatchPlaceTextbox.Text, TypeTextbox.Text, ColorTextbox.Text,
-            AdditionalTextbox.Text, PregnantTextbox.Text, TraumaTextbox.Text, StPlaceTextbox.Text, StDateTextbox.Text, MarkTextbox.Text, LabelTextbox.Text, 
-            VacTextbox.Text, VacDateTextbox.Text, AwayTextbox.Text, AwayDateTextbox.Text);
-            InitializeComponent();
+            TDWapp = app;
+            TDWworkbook = workbook;
+            TDWworksheet = worksheet;
+            TableWork TW = new TableWork(TDWworksheet);
+            TW.GetRow(startRng, data);
+            NumberTextbox.Text = data[0];
+            CatchDateTextbox.Text = data[1];
+            CuratorTextbox.Text = data[2];
+            PhoneTextbox.Text = data[3];
+            CatchPlaceTextbox.Text = data[4];
+            TypeTextbox.Text = data[5];
+            ColorTextbox.Text = data[6];
+            AdditionalTextbox.Text = data[7];
+            PregnantTextbox.Text = data[8];
+            TraumaTextbox.Text = data[9];
+            StPlaceTextbox.Text = data[10];
+            StDateTextbox.Text = data[11];
+            MarkTextbox.Text = data[12];
+            LabelTextbox.Text = data[13];
+            VacTextbox.Text = data[14];
+            VacDateTextbox.Text = data[15];
+            AwayTextbox.Text = data[16];
+            AwayDateTextbox.Text = data[17];
         }
 
         private void ForwardButton_Click(object sender, RoutedEventArgs e)
         {
             ADW.Show();
             this.Close();
-            workbook.Close();
+            //workbook.Close();
         }
     }
 }

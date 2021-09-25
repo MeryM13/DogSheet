@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Excel = Microsoft.Office.Interop.Excel;
 
 
 namespace DogSheet
@@ -21,9 +22,12 @@ namespace DogSheet
     /// </summary>
     public partial class MainWindow : Window
     {
-        public DocsWindow DW = new DocsWindow();
+        Excel.Application MWapp;
+        Excel.Workbook MWworkbook;
         public MainWindow()
         {
+            MWapp = new Excel.Application();
+            MWworkbook = MWapp.Workbooks.Open(@"C:\Users\pshar\source\repos\DogSheet\Журнал отлова безнадзорных животных.xlsx");
             InitializeComponent();
         }
 
@@ -34,6 +38,7 @@ namespace DogSheet
 
         private void DocsButton_Click(object sender, RoutedEventArgs e)
         {
+            DocsWindow DW = new DocsWindow(MWapp, MWworkbook);
             DW.Show();
         }
     }

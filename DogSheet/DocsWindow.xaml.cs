@@ -20,29 +20,33 @@ namespace DogSheet
     /// </summary>
     public partial class DocsWindow : Window
     {
-        public TableDataWindow TDW = new TableDataWindow();
-        Excel.Application app = new Excel.Application();
-        Excel.Workbook workbook;
+        Excel.Application DWapp;
+        Excel.Workbook DWworkbook;
+        Excel.Worksheet DWworksheet;
 
-        public DocsWindow()
+        public DocsWindow(Excel.Application app, Excel.Workbook workbook)
         {
+            DWapp = app;
+            DWworkbook = workbook;
+            DWworksheet = DWworkbook.Sheets[1];
             InitializeComponent();
         }
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
+            //DWworkbook = DWapp.Workbooks.Open(@"C:\Users\pshar\source\repos\DogSheet\Журнал отлова безнадзорных животных.xlsx");
+            TableWork TW = new TableWork(DWworksheet);
+            Excel.Range rng = null;
             if (NumberTextbox.Text == "")                               //Создание новой записи в таблице
             {
-                TableDataWindow TDW = new TableDataWindow();
+                rng = TW.GetLast();
+                TableDataWindow TDW = new TableDataWindow(DWapp, DWworkbook, DWworksheet, rng);
+                //DWworkbook.Close();
                 TDW.Show();
                 this.Close();
             }
             else                                                        //Работа с уже имеющейся записью
             {
-                workbook = app.Workbooks.Open(@"C:\Users\pshar\source\repos\DogSheet\Журнал отлова безнадзорных животных.xlsx");
-                Excel.Worksheet worksheet = (Excel.Worksheet)app.ActiveWorkbook.Sheets[1];
-                TableWork TW = new TableWork(worksheet);
-                Excel.Range rng = null;
                 Console.WriteLine(NumberTextbox.Text);
                 if (NumberTextbox.Text.Length <= 3)                     //Если введены только цифры
                 {
@@ -60,8 +64,8 @@ namespace DogSheet
                 }
                 if (rng != null)
                 {
-                    workbook.Close();
-                    TableDataWindow TDW = new TableDataWindow();
+                    //workbook.Close();
+                    TableDataWindow TDW = new TableDataWindow(DWapp, DWworkbook, DWworksheet, rng);
                     TDW.Show();
                     this.Close();
                 }
