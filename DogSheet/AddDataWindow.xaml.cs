@@ -16,9 +16,6 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace DogSheet
 {
-    /// <summary>
-    /// Логика взаимодействия для AddDataWindow.xaml
-    /// </summary>
     public partial class AddDataWindow : Window
     {
         private TableDataWindow TDW;
@@ -91,18 +88,42 @@ namespace DogSheet
             allData[19] = RequestDateTextbox.Text;
             allData[20] = HeadTextbox.Text;
             allData[21] = CatcherTextbox.Text;
-            allData[22] = CategoryCombobox.SelectedItem.ToString();
-            allData[23] = SexCombobox.SelectedItem.ToString();
+
+            if (CategoryCombobox.SelectedItem == null)
+                allData[22] = "";
+            else
+                allData[22] = CategoryCombobox.SelectedItem.ToString();
+
+            if (SexCombobox.SelectedItem == null)
+                allData[23] = "";
+            else
+                allData[23] = SexCombobox.SelectedItem.ToString();
+
             allData[24] = BreedTextbox.Text;
-            allData[25] = FurCombobox.SelectedItem.ToString();
-            allData[26] = EarsCombobox.SelectedItem.ToString();
-            allData[27] = TailCombobox.SelectedItem.ToString();
+
+            if (FurCombobox.SelectedItem == null)
+                allData[25] = "";
+            else
+                allData[25] = FurCombobox.SelectedItem.ToString();
+
+            if (EarsCombobox.SelectedItem == null)
+                allData[26] = "";
+            else
+                allData[26] = EarsCombobox.SelectedItem.ToString();
+
+            if (TailCombobox.SelectedItem == null)
+                allData[27] = "";
+            else
+                allData[27] = TailCombobox.SelectedItem.ToString();
+
             allData[28] = WeightTextbox.Text;
             allData[29] = AgeTextbox.Text;
             allData[30] = ChipTextbox.Text;
             allData[31] = MedicalTextbox.Text;
             allData[32] = StMethodTextbox.Text;
+
             TW.SetRow(rng, allData);
+
             if (photoPath != "")
             {
                 DocsWork docsWork = new DocsWork();
@@ -125,6 +146,45 @@ namespace DogSheet
                         allData[22], allData[5], allData[23], allData[24], allData[6], allData[25], allData[26], allData[27], allData[29],
                         allData[28], additional, allData[30], allData[16]);
                 }
+                if (Doc2Checkbox.IsChecked == true)
+                {
+                    string sex = allData[23];
+                    switch (allData[22])
+                        {
+                        case "Собака":
+                        case "Щенок":
+                            {
+                                if (sex == "м")
+                                    sex = "Кобель";
+                                else
+                                    sex = "Сука";
+                                break;
+                            }
+                        case "Кошка":
+                        case "Котенок":
+                            {
+                                if (sex == "м")
+                                    sex = "Кот";
+                                else
+                                    sex = "Кошка";
+                                break;
+                            }
+                        default:
+                            {
+                                sex = allData[23];
+                                break;
+                            }
+                    }
+                    string away;
+                    if (allData[17] != "")
+                        away = allData[17];
+                    else
+                        away = "выпуск";
+
+                    docsWork.Doc2Create(photoPath, allData[0], allData[1], sex, allData[24], allData[6], allData[25], allData[29], allData[28], allData[7],
+                        allData[31], allData[16], away, allData[14], allData[15], allData[13], allData[12], allData[32]);
+                }
+                docsWork.wordApp.Quit();
                 Close();
                 TDW.Close();
             }
