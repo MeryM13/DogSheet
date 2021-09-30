@@ -19,3 +19,7 @@ What can this programm do?
 	*Added DocsWork class
 	*Finished AddDataWindow
 	*Programm can now create one type of documents (personal animal cards)
+	
+	(Ver. 0.4)
+	*Finished DocsWork class (added layout for second document)
+	*Fixed some bugs (programm no longer tries to read "phone" from excel table as datetime)
