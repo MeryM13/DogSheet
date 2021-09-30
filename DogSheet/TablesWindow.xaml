@@ -1,0 +1,18 @@
+﻿<Window x:Class="DogSheet.TablesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DogSheet"
+        mc:Ignorable="d"
+        Title="TablesWindow" Height="450" Width="800" Closed="Window_Closed">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="607*"/>
+            <ColumnDefinition Width="185*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ShortTableButton" Content="Краткая таблица" HorizontalAlignment="Left" Height="64" Margin="253,214,0,0" VerticalAlignment="Top" Width="286" Click="ShortTableButton_Click"/>
+        <Button x:Name="FullTableButton" Content="Полная таблица" HorizontalAlignment="Left" Height="64" Margin="253,294,0,0" VerticalAlignment="Top" Width="286" Click="FullTableButton_Click"/>
+
+    </Grid>
+</Window>

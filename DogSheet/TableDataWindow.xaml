@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DogSheet"
         mc:Ignorable="d"
-        Title="TableDataWindow" Height="490" Width="800">
+        Title="TableDataWindow" Height="490" Width="800" Closed="Window_Closed">
     <Grid>
         <TextBox x:Name="NumberTextbox" HorizontalAlignment="Left" Height="28" Margin="175,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
         <TextBox x:Name="CuratorTextbox" HorizontalAlignment="Left" Height="28" Margin="175,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>

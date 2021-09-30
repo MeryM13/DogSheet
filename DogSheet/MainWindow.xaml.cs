@@ -11,35 +11,45 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using Microsoft.Win32;
 using System.Windows.Shapes;
 using Excel = Microsoft.Office.Interop.Excel;
 
 
 namespace DogSheet
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        Excel.Application MWapp;
-        Excel.Workbook MWworkbook;
-        public MainWindow()
+        public Excel.Application exApp;
+        public Excel.Workbook exWorkbook;
+        public string pathToShort = @"C:\Users\pshar\source\repos\DogSheet\Журнал отлова (short).xlsx";
+        public string pathToFull = @"C:\Users\pshar\source\repos\DogSheet\Журнал отлова (full).xlsx";
+
+        public MainWindow()                                                         //Главное окно
         {
-            MWapp = new Excel.Application();
-            MWworkbook = MWapp.Workbooks.Open(@"C:\Users\pshar\source\repos\DogSheet\Журнал отлова безнадзорных животных.xlsx");
+            exApp = new Excel.Application();
+            exWorkbook = exApp.Workbooks.Open(pathToShort);
             InitializeComponent();
         }
 
-        private void TablesButton_Click(object sender, RoutedEventArgs e)
+        private void TablesButton_Click(object sender, RoutedEventArgs e)           //Открытие таблиц для просмотра (заменить на выбор)
         {
-            System.Diagnostics.Process.Start(@"C:\Users\pshar\source\repos\DogSheet\Журнал отлова безнадзорных животных.xlsx");
+            TablesWindow TW = new TablesWindow(this);
+            TW.Show();
+            this.Hide();
         }
 
-        private void DocsButton_Click(object sender, RoutedEventArgs e)
+        private void DocsButton_Click(object sender, RoutedEventArgs e)             //Открытие окна для создания отчетов
         {
-            DocsWindow DW = new DocsWindow(MWapp, MWworkbook);
+            DocsWindow DW = new DocsWindow(this);
             DW.Show();
+            this.Hide();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            exWorkbook.Close(true);
+            exApp.Quit();
         }
     }
 }

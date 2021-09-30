@@ -5,10 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DogSheet"
         mc:Ignorable="d"
-        Title="DocsWindow" Height="450" Width="800">
+        Title="DocsWindow" Height="450" Width="800" Closed="Window_Closed">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="29*"/>
+        </Grid.ColumnDefinitions>
         <Button x:Name="CreateButton" Content="Создать отчеты" HorizontalAlignment="Left" Height="58" Margin="264,317,0,0" VerticalAlignment="Top" Width="248" Click="CreateButton_Click"/>
-        <TextBox x:Name="NumberTextbox" HorizontalAlignment="Left" Height="32" Margin="431,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="NumberTextbox" HorizontalAlignment="Left" Height="32" Margin="431,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
         <Label Content="Введите номер животного" HorizontalAlignment="Left" Margin="139,240,0,0" VerticalAlignment="Top" Height="32" Width="212"/>
 
     </Grid>

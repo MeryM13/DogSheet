@@ -1,12 +1,69 @@
-﻿<Window x:Class="DogSheet.AddDataWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DogSheet"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="DogSheet.AddDataWindow"
         mc:Ignorable="d"
-        Title="AddDataWindow" Height="450" Width="800">
+        Title="AddDataWindow" Height="528.656" Width="800" Closed="Window_Closed">
     <Grid>
-        
+        <TextBox x:Name="RequestDateTextbox" HorizontalAlignment="Left" Height="28" Margin="175,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+        <TextBox x:Name="HeadTextbox" HorizontalAlignment="Left" Height="28" Margin="175,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+        <TextBox x:Name="CatcherTextbox" HorizontalAlignment="Left" Height="28" Margin="175,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+        <Label Content="Дата заявки" HorizontalAlignment="Left" Height="28" Margin="42,110,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label Content="Руководитель" HorizontalAlignment="Left" Height="28" Margin="42,189,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label Content="Ловец" HorizontalAlignment="Left" Height="28" Margin="42,229,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label Content="Категория" HorizontalAlignment="Left" Height="28" Margin="42,271,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label Content="Уши" HorizontalAlignment="Left" Height="28" Margin="42,313,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label Content="Хвост" HorizontalAlignment="Left" Height="28" Margin="42,357,0,0" VerticalAlignment="Top" Width="128"/>
+        <TextBox x:Name="BreedTextbox" HorizontalAlignment="Left" Height="28" Margin="565,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+        <TextBox x:Name="WeightTextbox" HorizontalAlignment="Left" Height="28" Margin="565,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+        <TextBox x:Name="AgeTextbox" HorizontalAlignment="Left" Height="28" Margin="565,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+        <TextBox x:Name="MedicalTextbox" HorizontalAlignment="Left" Height="28" Margin="565,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+        <TextBox x:Name="StMethodTextbox" HorizontalAlignment="Left" Height="28" Margin="565,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+        <TextBox x:Name="ChipTextbox" HorizontalAlignment="Left" Height="28" Margin="565,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+        <Label Content="Шерсть" HorizontalAlignment="Left" Height="28" Margin="430,32,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label Content="Порода" HorizontalAlignment="Left" Height="28" Margin="430,152,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label Content="Вес" HorizontalAlignment="Left" Height="28" Margin="430,192,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label Content="Возраст" HorizontalAlignment="Left" Height="28" Margin="430,231,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label Content="Пол" HorizontalAlignment="Left" Height="28" Margin="430,271,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label Content="Осмотр" HorizontalAlignment="Left" Height="28" Margin="430,313,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label Content="Метод стерилизации" HorizontalAlignment="Left" Height="28" Margin="430,355,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label Content="Чип" HorizontalAlignment="Left" Height="28" Margin="430,71,0,0" VerticalAlignment="Top" Width="130"/>
+        <Button x:Name="CreateButton" Content="Далее" HorizontalAlignment="Left" Height="28" Margin="231,449,0,0" VerticalAlignment="Top" Width="308" Click="CreateButton_Click"/>
+        <TextBox x:Name="RequestNumberTextbox" HorizontalAlignment="Left" Height="28" Margin="175,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+        <Label Content="№ заявки" HorizontalAlignment="Left" Height="28" Margin="42,71,0,0" VerticalAlignment="Top" Width="128"/>
+        <CheckBox x:Name="Doc1Checkbox" Content="Карта учета" HorizontalAlignment="Left" Height="28" Margin="42,32,0,0" VerticalAlignment="Top" Width="306"/>
+        <CheckBox x:Name="Doc2Checkbox" Content="Вет. карта" HorizontalAlignment="Left" Height="28" Margin="430,113,0,0" VerticalAlignment="Top" Width="306"/>
+        <CheckBox x:Name="GroupCheckbox" Content="Несколько человек?" HorizontalAlignment="Left" Height="28" Margin="42,152,0,0" VerticalAlignment="Top" Width="306"/>
+        <ComboBox x:Name="CategoryCombobox" HorizontalAlignment="Left" Height="28" Margin="175,271,0,0" VerticalAlignment="Top" Width="173">
+            <System:String>Собака</System:String>
+            <System:String>Щенок</System:String>
+            <System:String>Кошка</System:String>
+            <System:String>Котенок</System:String>
+            <System:String>Иное</System:String>
+        </ComboBox>
+        <ComboBox x:Name="EarsCombobox" HorizontalAlignment="Left" Height="28" Margin="175,313,0,0" VerticalAlignment="Top" Width="173">
+            <System:String>Стоят</System:String>
+            <System:String>Висят</System:String>
+        </ComboBox>
+        <ComboBox x:Name="TailCombobox" HorizontalAlignment="Left" Height="28" Margin="175,357,0,0" VerticalAlignment="Top" Width="173">
+            <System:String>Стоит</System:String>
+            <System:String>Висит</System:String>
+        </ComboBox>
+        <ComboBox x:Name="FurCombobox" HorizontalAlignment="Left" Height="28" Margin="565,32,0,0" VerticalAlignment="Top" Width="173">
+            <System:String>г/ш</System:String>
+            <System:String>ж/ш</System:String>
+            <System:String>к/ш</System:String>
+            <System:String>с/ш</System:String>
+            <System:String>д/ш</System:String>
+        </ComboBox>
+        <ComboBox x:Name="SexCombobox" HorizontalAlignment="Left" Height="28" Margin="565,271,0,0" VerticalAlignment="Top" Width="173">
+            <System:String>м</System:String>
+            <System:String>ж</System:String>
+        </ComboBox>
+        <Button x:Name="PhotoButton" Content="Выбор фотографии" HorizontalAlignment="Left" Height="28" Margin="231,407,0,0" VerticalAlignment="Top" Width="308" Click="PhotoButton_Click"/>
+
     </Grid>
 </Window>

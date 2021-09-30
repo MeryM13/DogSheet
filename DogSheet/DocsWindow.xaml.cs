@@ -20,30 +20,27 @@ namespace DogSheet
     /// </summary>
     public partial class DocsWindow : Window
     {
-        Excel.Application DWapp;
-        Excel.Workbook DWworkbook;
-        Excel.Worksheet DWworksheet;
+        public Excel.Worksheet exWorksheet;
+        public MainWindow MW;
 
-        public DocsWindow(Excel.Application app, Excel.Workbook workbook)
+        public DocsWindow(MainWindow mainWindow)
         {
-            DWapp = app;
-            DWworkbook = workbook;
-            DWworksheet = DWworkbook.Sheets[1];
+            MW = mainWindow;
+            exWorksheet = MW.exWorkbook.Sheets[1];
             InitializeComponent();
         }
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
-            //DWworkbook = DWapp.Workbooks.Open(@"C:\Users\pshar\source\repos\DogSheet\Журнал отлова безнадзорных животных.xlsx");
-            TableWork TW = new TableWork(DWworksheet);
+            TableWork TW = new TableWork(exWorksheet);
             Excel.Range rng = null;
             if (NumberTextbox.Text == "")                               //Создание новой записи в таблице
             {
-                rng = TW.GetLast();
-                TableDataWindow TDW = new TableDataWindow(DWapp, DWworkbook, DWworksheet, rng);
-                //DWworkbook.Close();
+                Excel.Range last = TW.GetLast();
+                rng = exWorksheet.Cells[last.Row + 1, 1];
+                TableDataWindow TDW = new TableDataWindow(rng, this);
                 TDW.Show();
-                this.Close();
+                this.Hide();
             }
             else                                                        //Работа с уже имеющейся записью
             {
@@ -64,16 +61,20 @@ namespace DogSheet
                 }
                 if (rng != null)
                 {
-                    //workbook.Close();
-                    TableDataWindow TDW = new TableDataWindow(DWapp, DWworkbook, DWworksheet, rng);
+                    TableDataWindow TDW = new TableDataWindow(rng, this);
                     TDW.Show();
-                    this.Close();
+                    this.Hide();
                 }
                 else                                                    //Если нет такого номера или введены неправилные данные
                 {
                     MessageBox.Show("Животного под таким номером не существует, попробуйте ещё раз.");
                 }
             }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)          //При закрытии окна снова откроется главное
+        {
+            MW.Show();
         }
     }
 }

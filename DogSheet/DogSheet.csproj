@@ -61,8 +61,12 @@
     <Compile Include="AddDataWindow.xaml.cs">
       <DependentUpon>AddDataWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DocsWork.cs" />
     <Compile Include="TableDataWindow.xaml.cs">
       <DependentUpon>TableDataWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TablesWindow.xaml.cs">
+      <DependentUpon>TablesWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TableWork.cs" />
     <Page Include="AddDataWindow.xaml">
@@ -89,6 +93,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="TableDataWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TablesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
