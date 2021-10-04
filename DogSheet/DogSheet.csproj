@@ -183,5 +183,29 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sumki-s-applikacijami-v-vide-siluetov-sobak-images-big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Tablet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="taxi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tablet 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tablet2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1614532542_168-p-lev-na-belom-fone-226.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

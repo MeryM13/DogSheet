@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Word = Microsoft.Office.Interop.Word;
+﻿using Word = Microsoft.Office.Interop.Word;
 
 namespace DogSheet
 {
     class DocsWork
     {
         public Word.Application wordApp = new Word.Application();
+
         private object missing = System.Reflection.Missing.Value;
 
-        public void Doc1Create(string photoPath, string animalNumber, string catchDate, string catchPlace, string requestNumber, string requestDate,
+        public void Doc1Create(string path, string photoPath, string animalNumber, string catchDate, string catchPlace, string requestNumber, string requestDate,
             string head, string catcher, string category, string type, string sex, string breed, string color, string fur, string ears, string tail, string age,
             string weight, string additional, string chip, string awayDate)
         {
-            object filename = @"C:\Users\pshar\Desktop\Карточка учета " + animalNumber + ".docx";
+            object filename = path + @"\Карточка учета №"+ animalNumber + ".docx";
 
             Word.Document doc;
             try
@@ -27,11 +23,15 @@ namespace DogSheet
             {
                 doc = wordApp.Documents.Add(ref missing, ref missing, ref missing, ref missing);
             }
+
             Word.Range rng = doc.Range(doc.Content.Start, doc.Content.End);                       //Очистка документа
             rng.Text = "";
+
             doc.Content.SetRange(0, 0);
+
             Word.Paragraph paragraph1 = doc.Content.Paragraphs.Add(ref missing);                    //Создание первой таблицы
             Word.Table table1 = doc.Tables.Add(paragraph1.Range, 1, 2, ref missing, ref missing);
+
             table1.Borders.Enable = 1;                                                               //Заполнение первой таблицы
             foreach (Word.Row row in table1.Rows)
             {
@@ -42,18 +42,26 @@ namespace DogSheet
                     cell.VerticalAlignment = Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
                 }
             }
+
             table1.Cell(1, 1).Range.InlineShapes.AddPicture(photoPath);
             table1.Cell(1, 2).Range.Text = "КАРТОЧКА\nУЧЕТА БЕЗНАДЗОРНОГО ЖИВОТНОГО\n№ " + animalNumber + "\n\n" 
                 + catchDate + "\n" +catchPlace;
+
             paragraph1.Range.InsertParagraphAfter();
+
             Word.Paragraph paragraph2 = doc.Content.Paragraphs.Add(ref missing);
+
             paragraph2.Range.Font.Name = "Times New Roman";
             paragraph2.Range.Font.Size = 12;
+
             paragraph2.Range.Text = "1.	В соответствии с заявлением № " + requestNumber + " от " + requestDate + " Служба помощи животным «Белый Пёс» " +
                 "(ИП Шаромова А.Ю. ОГРНИП 319547600032822) в составе: руководитель " + head + " и ловец " + catcher + " на машине: " +
                 "MITSUBISHI DELICA D3, госномер Н472НО 154 произвела отлов и транспортировку животного:	";
+
             paragraph2.Range.InsertParagraphAfter();
+
             Word.Table table2 = doc.Tables.Add(paragraph2.Range, 15, 2, ref missing, ref missing);
+
             table2.Borders.Enable = 1;
             foreach (Word.Row row in table2.Rows)
             {
@@ -63,6 +71,7 @@ namespace DogSheet
                     cell.Range.Font.Size = 12;
                 }
             }
+
             table2.Cell(1, 1).Range.Text = "Категория: собака, щенок, кошка, котенок, иное";
             table2.Cell(1, 2).Range.Text = category;
             table2.Cell(2, 1).Range.Text = "Дата поступления в организацию по отлову безнадзорных животных";
@@ -93,10 +102,14 @@ namespace DogSheet
             table2.Cell(14, 2).Range.Text = animalNumber;
             table2.Cell(15, 1).Range.Text = "Место отлова (адрес)";
             table2.Cell(15, 2).Range.Text = catchPlace;
+
             paragraph2.Range.InsertParagraphAfter();
+
             Word.Paragraph paragraph3 = doc.Content.Paragraphs.Add(ref missing);
+
             paragraph3.Range.Font.Name = "Times New Roman";
             paragraph3.Range.Font.Size = 12;
+
             paragraph3.Range.Text = "2.	Осуществлена передача безнадзорного животного владельцу, в организацию, возврат на " +
                 "прежнее место обитания. Дата: " + awayDate + "\nДанные: для юридических лиц:\nорганизация" +
                 "__________________________________________________________________,адрес" +
@@ -110,22 +123,28 @@ namespace DogSheet
                 "_______________________________________________________________________.\n\nДата выписки животного " +
                 "_____________________________________________________________________________\nФ.И.О. руководителя " +
                 "___________________________________________\nПодпись__________________________\n";
+
             paragraph3.Range.InsertParagraphAfter();
+
             Word.Paragraph paragraph4 = doc.Content.Paragraphs.Add(ref missing);
+
             paragraph4.Range.Font.Name = "Times New Roman";
             paragraph4.Range.Font.Size = 12;
+
             paragraph4.Range.Text = "3. Оформление в муниципальную собственность\nДата / " +
                 "номер документа_________________________________________________________\n";
+
             paragraph4.Range.InsertParagraphAfter();
+
             doc.SaveAs2(ref filename);
             doc.Close(ref missing, ref missing, ref missing);
         }
 
-        public void Doc2Create(string photoPath, string animalNumber, string catchDate, string sex, string breed, string color, 
+        public void Doc2Create(string path, string photoPath, string animalNumber, string catchDate, string sex, string breed, string color, 
             string fur, string age, string weight, string additional, string medical, string awayDate, string away,
             string vaccine, string vacDate, string label, string mark, string stMethod)
         {
-            object filename = @"C:\Users\pshar\Desktop\Вет карта " + animalNumber + ".docx";
+            object filename = path + @"\Вет карта " + animalNumber + ".docx";
 
             Word.Document doc;
             try
@@ -136,12 +155,13 @@ namespace DogSheet
             {
                 doc = wordApp.Documents.Add(ref missing, ref missing, ref missing, ref missing);
             }
+
             Word.Range rng = doc.Range(doc.Content.Start, doc.Content.End);                       //Очистка документа
             rng.Text = "";
+
             doc.Content.SetRange(0, 0);
 
             Word.Paragraph para1 = doc.Content.Paragraphs.Add(ref missing);
-
             Word.Table table1 = doc.Tables.Add(para1.Range, 13, 2, ref missing, ref missing);
 
             table1.Borders.Enable = 1;
@@ -154,6 +174,7 @@ namespace DogSheet
                     cell.VerticalAlignment = Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
                 }
             }
+
             table1.Cell(1, 1).Range.InlineShapes.AddPicture(photoPath);
             table1.Cell(1, 2).Range.Text = "УЧЕТНАЯ КАРТОЧКА ЖИВОТНОГО № " + animalNumber;
             table1.Cell(1, 2).Range.Font.Size = 16;

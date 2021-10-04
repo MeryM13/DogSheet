@@ -1,39 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Excel = Microsoft.Office.Interop.Excel;
-using Word = Microsoft.Office.Interop.Word;
 
 namespace DogSheet
 {
-    /// <summary>
-    /// Логика взаимодействия для TableDataWindow.xaml
-    /// </summary>
     public partial class TableDataWindow : Window                   //Окно для ввода данных, которые есть в первой таблице
     {
-        private Excel.Range workRange;
-        public string[] data = new string[18];
         private TableWork TW;
         public DocsWindow DW;
         private AddDataWindow ADW;
 
+        private Excel.Range workRange;
+
+        public string[] data = new string[18];
+
         public TableDataWindow(Excel.Range startRng, DocsWindow docsWindow)
         {
             InitializeComponent();
+
             DW = docsWindow;
             workRange = startRng;
+
             TW = new TableWork(DW.exWorksheet);
+
             TW.GetRow(workRange, data);
+
             NumberTextbox.Text = data[0];
             CatchDateTextbox.Text = data[1];
             CuratorTextbox.Text = data[2];
@@ -74,8 +65,11 @@ namespace DogSheet
             data[15] = VacDateTextbox.Text;
             data[16] = AwayDateTextbox.Text;
             data[17] = AwayTextbox.Text;
+
             TW.SetRow(workRange, data);
+
             ADW = new AddDataWindow(this);
+
             ADW.Show();
             this.Hide();
         }

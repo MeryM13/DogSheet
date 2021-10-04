@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Win32;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace DogSheet
@@ -19,46 +8,67 @@ namespace DogSheet
     public partial class AddDataWindow : Window
     {
         private TableDataWindow TDW;
-        private string[] allData = new string[33];
-        private string photoPath = "";
         private TableWork TW;
+
         private Excel.Workbook workbookFull;
         private Excel.Worksheet worksheetFull;
         private Excel.Range rng;
 
+        private string[] allData = new string[33];
+        private string photoPath = "";
+
         public AddDataWindow(TableDataWindow tableDataWindow)
         {
             InitializeComponent();
+
             TDW = tableDataWindow;
+
             workbookFull = TDW.DW.MW.exApp.Workbooks.Open(TDW.DW.MW.pathToFull);
             worksheetFull = workbookFull.Sheets[1];
+
             TW = new TableWork(worksheetFull);
+
             allData[0] = TDW.data[0];
+
             if (TW.TableRangeSearch(allData[0]) != null)
             {
                 rng = TW.TableRangeSearch(allData[0]);
+
                 TW.SetRow(rng, TDW.data);
                 TW.GetRow(rng, allData);
+
                 Doc1Checkbox.IsChecked = true;
                 Doc2Checkbox.IsChecked = true;
+
                 RequestNumberTextbox.Text = allData[18];
                 RequestDateTextbox.Text = allData[19];
                 HeadTextbox.Text = allData[20];
+
                 if (allData[20] == allData[21])
                     GroupCheckbox.IsChecked = true;
                 else
                     CatcherTextbox.Text = allData[21];
+
+
                 if (allData[22] != null)
                     CategoryCombobox.SelectedItem = allData[22];
+
+
                 if (allData[23] != null)
                     SexCombobox.SelectedItem = allData[23];
+
+
                 BreedTextbox.Text = allData[24];
+
                 if (allData[25] != null)
                     FurCombobox.SelectedItem = allData[25];
+
                 if (allData[26] != null)
                     EarsCombobox.SelectedItem = allData[26];
+
                 if (allData[27] != null)
                     TailCombobox.SelectedItem = allData[27];
+
                 WeightTextbox.Text = allData[28];
                 AgeTextbox.Text = allData[29];
                 ChipTextbox.Text = allData[30];
@@ -69,6 +79,7 @@ namespace DogSheet
             {
                 Excel.Range search = TW.GetLast();
                 rng = worksheetFull.Cells[search.Row + 1, 1];
+
                 TW.SetRow(rng, TDW.data);
             }
         }
@@ -127,9 +138,11 @@ namespace DogSheet
             if (photoPath != "")
             {
                 DocsWork docsWork = new DocsWork();
+
                 if (Doc1Checkbox.IsChecked == true)
                 {
                     string additional = "";
+
                     if (allData[7] != "")
                         additional += allData[7];
                     if (allData[8] != "")
@@ -142,13 +155,16 @@ namespace DogSheet
                             additional += ", " + allData[9];
                         else
                             additional += allData[9];
-                    docsWork.Doc1Create(photoPath, allData[0], allData[1], allData[4], allData[18], allData[19], allData[20], allData[21],
+
+                    docsWork.Doc1Create(TDW.DW.MW.path, photoPath, allData[0], allData[1], allData[4], allData[18], allData[19], allData[20], allData[21],
                         allData[22], allData[5], allData[23], allData[24], allData[6], allData[25], allData[26], allData[27], allData[29],
                         allData[28], additional, allData[30], allData[16]);
                 }
+
                 if (Doc2Checkbox.IsChecked == true)
                 {
                     string sex = allData[23];
+
                     switch (allData[22])
                         {
                         case "Собака":
@@ -175,15 +191,18 @@ namespace DogSheet
                                 break;
                             }
                     }
+
                     string away;
+
                     if (allData[17] != "")
                         away = allData[17];
                     else
                         away = "выпуск";
 
-                    docsWork.Doc2Create(photoPath, allData[0], allData[1], sex, allData[24], allData[6], allData[25], allData[29], allData[28], allData[7],
+                    docsWork.Doc2Create(TDW.DW.MW.path, photoPath, allData[0], allData[1], sex, allData[24], allData[6], allData[25], allData[29], allData[28], allData[7],
                         allData[31], allData[16], away, allData[14], allData[15], allData[13], allData[12], allData[32]);
                 }
+
                 docsWork.wordApp.Quit();
                 Close();
                 TDW.Close();

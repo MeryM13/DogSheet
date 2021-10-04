@@ -5,14 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DogSheet"
         mc:Ignorable="d"
-        Title="TablesWindow" Height="450" Width="800" Closed="Window_Closed">
-    <Grid>
+        Title="Просмотр таблиц" Height="450" Width="800" Closed="Window_Closed">
+    <Grid Width="800" Height="400">
+        <Grid.Background>
+            <ImageBrush ImageSource="kos.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="607*"/>
             <ColumnDefinition Width="185*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="ShortTableButton" Content="Краткая таблица" HorizontalAlignment="Left" Height="64" Margin="253,214,0,0" VerticalAlignment="Top" Width="286" Click="ShortTableButton_Click"/>
-        <Button x:Name="FullTableButton" Content="Полная таблица" HorizontalAlignment="Left" Height="64" Margin="253,294,0,0" VerticalAlignment="Top" Width="286" Click="FullTableButton_Click"/>
+        <Button x:Name="ShortTableButton" Content="Краткая таблица" HorizontalAlignment="Left" Height="64" Margin="253,214,0,0" VerticalAlignment="Top" Width="286" Click="ShortTableButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="button.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="FullTableButton" Content="Полная таблица" HorizontalAlignment="Left" Height="64" Margin="253,294,0,0" VerticalAlignment="Top" Width="286" Click="FullTableButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="button.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

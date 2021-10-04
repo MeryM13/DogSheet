@@ -5,10 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DogSheet"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
-    <Grid>
-        <Button x:Name="DocsButton" Content="Создать отчет" HorizontalAlignment="Left" Height="72" Margin="236,187,0,0" VerticalAlignment="Top" Width="307" Click="DocsButton_Click"/>
-        <Button x:Name="TablesButton" Content="Просмотреть таблицы" HorizontalAlignment="Left" Height="72" Margin="236,284,0,0" VerticalAlignment="Top" Width="307" Click="TablesButton_Click"/>
+        Title="Собачья таблица" Height="450" Width="800" Closing="Window_Closing">
+    <Window.Background>
+        <ImageBrush ImageSource="kos.jpg"/>
+    </Window.Background>
+    <Grid Width="800" Height="400">
+        <Grid.Background>
+            <ImageBrush ImageSource="kos.jpg"/>
+        </Grid.Background>
+        <Button x:Name="DocsButton" Content="Создать отчет" HorizontalAlignment="Left" Height="72" Margin="236,187,0,0" VerticalAlignment="Top" Width="307" Click="DocsButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="button.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="TablesButton" Content="Просмотреть таблицы" HorizontalAlignment="Left" Height="72" Margin="236,284,0,0" VerticalAlignment="Top" Width="307" Click="TablesButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="button.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>
