@@ -1,7 +1,7 @@
 # DogSheet
 Ver. 0.4
 
-DogSheet (pun intentional) is a software created by a very specific commission for a small local animal-care organization. 
+DogSheet (pun intentded) is a software created by a very specific commission for a local animal-care organization. 
 It should help the employees to fill all nessecary documents faster, leaving more time for their actual work.
 
 What can this programm do? 
