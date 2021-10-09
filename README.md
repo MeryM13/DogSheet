@@ -24,6 +24,10 @@ What can this programm do?
 	*Finished DocsWork class (added layout for second document)
 	*Fixed some bugs (programm no longer tries to read "phone" from excel table as datetime)
 
-	Ver. 0.5
+	(Ver. 0.5)
 	*Path to Excel and word files now can be changed
 	*Design prototype
+	
+	(Ver. 0.6)
+	*Design tweaks
+	*Directory and tables can be changed at any time
