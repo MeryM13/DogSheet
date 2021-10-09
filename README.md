@@ -1,5 +1,5 @@
 # DogSheet
-Ver. 0.4
+Ver. 0.5
 
 DogSheet (pun intentded) is a software created by a very specific commission for a local animal-care organization. 
 It should help the employees to fill all nessecary documents faster, leaving more time for their actual work.
@@ -23,3 +23,7 @@ What can this programm do?
 	(Ver. 0.4)
 	*Finished DocsWork class (added layout for second document)
 	*Fixed some bugs (programm no longer tries to read "phone" from excel table as datetime)
+
+	Ver. 0.5
+	*Path to Excel and word files now can be changed
+	*Design prototype
