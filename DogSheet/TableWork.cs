@@ -31,9 +31,9 @@ namespace DogSheet
 
                 if (value != null)
                 {
-                    if (value is double && i != 3)
+                    if (value is double @double && i != 3)
                     {
-                        DateTime dt = DateTime.FromOADate((double)value);
+                        DateTime dt = DateTime.FromOADate(@double);
                         data[i] = dt.ToString("dd.MM.yyyy");
                     }
                     else

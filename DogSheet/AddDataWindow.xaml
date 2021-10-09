@@ -6,171 +6,168 @@
         xmlns:local="clr-namespace:DogSheet"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="DogSheet.AddDataWindow"
         mc:Ignorable="d"
-        Title="Ввод дополнительных данных" Height="528.656" Width="800" Closed="Window_Closed">
-    <Window.Background>
-        <ImageBrush ImageSource="taxi.jpg"/>
-    </Window.Background>
+        Title="Ввод дополнительных данных" Height="528.656" Width="800" Closed="Window_Closed" Background="#FFF1F1F1">
     <Grid>
-        <TextBox x:Name="RequestDateTextbox" HorizontalAlignment="Left" Height="28" Margin="175,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="RequestDateTextbox" HorizontalAlignment="Left" Height="28" Margin="156,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="HeadTextbox" HorizontalAlignment="Left" Height="28" Margin="175,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="HeadTextbox" HorizontalAlignment="Left" Height="28" Margin="156,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="CatcherTextbox" HorizontalAlignment="Left" Height="28" Margin="175,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="CatcherTextbox" HorizontalAlignment="Left" Height="28" Margin="156,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <Label Content="Дата заявки" HorizontalAlignment="Left" Height="28" Margin="42,110,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Дата заявки" HorizontalAlignment="Left" Height="28" Margin="13,110,0,0" VerticalAlignment="Top" Width="133" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Руководитель" HorizontalAlignment="Left" Height="28" Margin="42,189,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Руководитель" HorizontalAlignment="Left" Height="28" Margin="13,189,0,0" VerticalAlignment="Top" Width="133" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Ловец" HorizontalAlignment="Left" Height="28" Margin="42,229,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Ловец" HorizontalAlignment="Left" Height="28" Margin="13,229,0,0" VerticalAlignment="Top" Width="133" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Категория" HorizontalAlignment="Left" Height="28" Margin="42,271,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Категория" HorizontalAlignment="Left" Height="28" Margin="13,271,0,0" VerticalAlignment="Top" Width="133" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Уши" HorizontalAlignment="Left" Height="28" Margin="42,313,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Уши" HorizontalAlignment="Left" Height="28" Margin="13,313,0,0" VerticalAlignment="Top" Width="133" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Хвост" HorizontalAlignment="Left" Height="28" Margin="42,357,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Хвост" HorizontalAlignment="Left" Height="28" Margin="15,355,0,0" VerticalAlignment="Top" Width="133" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <TextBox x:Name="BreedTextbox" HorizontalAlignment="Left" Height="28" Margin="565,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="BreedTextbox" HorizontalAlignment="Left" Height="28" Margin="598,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="WeightTextbox" HorizontalAlignment="Left" Height="28" Margin="565,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="WeightTextbox" HorizontalAlignment="Left" Height="28" Margin="598,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="AgeTextbox" HorizontalAlignment="Left" Height="28" Margin="565,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="AgeTextbox" HorizontalAlignment="Left" Height="28" Margin="598,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="MedicalTextbox" HorizontalAlignment="Left" Height="28" Margin="565,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="MedicalTextbox" HorizontalAlignment="Left" Height="28" Margin="598,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="StMethodTextbox" HorizontalAlignment="Left" Height="28" Margin="565,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="StMethodTextbox" HorizontalAlignment="Left" Height="28" Margin="598,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="ChipTextbox" HorizontalAlignment="Left" Height="28" Margin="565,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="ChipTextbox" HorizontalAlignment="Left" Height="28" Margin="598,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <Label Content="Шерсть" HorizontalAlignment="Left" Height="28" Margin="430,32,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Шерсть" HorizontalAlignment="Left" Height="28" Margin="408,32,0,0" VerticalAlignment="Top" Width="185" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Порода" HorizontalAlignment="Left" Height="28" Margin="430,152,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Порода" HorizontalAlignment="Left" Height="28" Margin="408,152,0,0" VerticalAlignment="Top" Width="185" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Вес" HorizontalAlignment="Left" Height="28" Margin="430,192,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Вес" HorizontalAlignment="Left" Height="28" Margin="408,192,0,0" VerticalAlignment="Top" Width="185" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Возраст" HorizontalAlignment="Left" Height="28" Margin="430,231,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Возраст" HorizontalAlignment="Left" Height="28" Margin="408,231,0,0" VerticalAlignment="Top" Width="185" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Пол" HorizontalAlignment="Left" Height="28" Margin="430,271,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Пол" HorizontalAlignment="Left" Height="28" Margin="408,271,0,0" VerticalAlignment="Top" Width="185" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Осмотр" HorizontalAlignment="Left" Height="28" Margin="430,313,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Осмотр" HorizontalAlignment="Left" Height="28" Margin="408,313,0,0" VerticalAlignment="Top" Width="185" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Метод стерилизации" HorizontalAlignment="Left" Height="28" Margin="430,355,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Метод стерилизации" HorizontalAlignment="Left" Height="28" Margin="408,355,0,0" VerticalAlignment="Top" Width="185" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Чип" HorizontalAlignment="Left" Height="28" Margin="430,71,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Чип" HorizontalAlignment="Left" Height="28" Margin="408,71,0,0" VerticalAlignment="Top" Width="185" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Button x:Name="CreateButton" Content="Далее" HorizontalAlignment="Left" Height="28" Margin="231,449,0,0" VerticalAlignment="Top" Width="308" Click="CreateButton_Click">
+        <Button x:Name="CreateButton" Content="Далее" HorizontalAlignment="Left" Height="52" Margin="408,416,0,0" VerticalAlignment="Top" Width="374" Click="CreateButton_Click" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Button.Background>
                 <ImageBrush ImageSource="button.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="RequestNumberTextbox" HorizontalAlignment="Left" Height="28" Margin="175,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="RequestNumberTextbox" HorizontalAlignment="Left" Height="28" Margin="156,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <Label Content="№ заявки" HorizontalAlignment="Left" Height="28" Margin="42,71,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="№ заявки" HorizontalAlignment="Left" Height="28" Margin="13,71,0,0" VerticalAlignment="Top" Width="133" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <CheckBox x:Name="Doc1Checkbox" Content="Карта учета" HorizontalAlignment="Left" Height="28" Margin="42,32,0,0" VerticalAlignment="Top" Width="306" Background="{x:Null}"/>
-        <CheckBox x:Name="Doc2Checkbox" Content="Вет. карта" HorizontalAlignment="Left" Height="28" Margin="430,113,0,0" VerticalAlignment="Top" Width="306"/>
-        <CheckBox x:Name="GroupCheckbox" Content="Несколько человек?" HorizontalAlignment="Left" Height="28" Margin="42,152,0,0" VerticalAlignment="Top" Width="306" BorderBrush="#FF6C1212"/>
-        <ComboBox x:Name="CategoryCombobox" HorizontalAlignment="Left" Height="28" Margin="175,271,0,0" VerticalAlignment="Top" Width="173">
+        <CheckBox x:Name="Doc1Checkbox" Content="Карта учета" HorizontalAlignment="Left" Height="28" Margin="13,32,0,0" VerticalAlignment="Top" Width="354" Background="{x:Null}" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Checked="Doc1Checkbox_Checked"/>
+        <CheckBox x:Name="Doc2Checkbox" Content="Вет. карта" HorizontalAlignment="Left" Height="28" Margin="408,110,0,0" VerticalAlignment="Top" Width="374" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Checked="Doc2Checkbox_Checked"/>
+        <CheckBox x:Name="GroupCheckbox" Content="         Несколько человек?" HorizontalAlignment="Left" Height="28" Margin="15,152,0,0" VerticalAlignment="Top" Width="352" BorderBrush="#FF6C1212" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16" Checked="GroupCheckbox_Checked"/>
+        <ComboBox x:Name="CategoryCombobox" HorizontalAlignment="Left" Height="28" Margin="158,271,0,0" VerticalAlignment="Top" Width="211" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <System:String>Собака</System:String>
             <System:String>Щенок</System:String>
             <System:String>Кошка</System:String>
             <System:String>Котенок</System:String>
             <System:String>Иное</System:String>
         </ComboBox>
-        <ComboBox x:Name="EarsCombobox" HorizontalAlignment="Left" Height="28" Margin="175,313,0,0" VerticalAlignment="Top" Width="173">
+        <ComboBox x:Name="EarsCombobox" HorizontalAlignment="Left" Height="28" Margin="158,313,0,0" VerticalAlignment="Top" Width="211" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <System:String>Стоят</System:String>
             <System:String>Висят</System:String>
         </ComboBox>
-        <ComboBox x:Name="TailCombobox" HorizontalAlignment="Left" Height="28" Margin="175,357,0,0" VerticalAlignment="Top" Width="173">
+        <ComboBox x:Name="TailCombobox" HorizontalAlignment="Left" Height="28" Margin="158,355,0,0" VerticalAlignment="Top" Width="211" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <System:String>Стоит</System:String>
             <System:String>Висит</System:String>
         </ComboBox>
-        <ComboBox x:Name="FurCombobox" HorizontalAlignment="Left" Height="28" Margin="565,32,0,0" VerticalAlignment="Top" Width="173">
+        <ComboBox x:Name="FurCombobox" HorizontalAlignment="Left" Height="28" Margin="598,32,0,0" VerticalAlignment="Top" Width="184" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <System:String>г/ш</System:String>
             <System:String>ж/ш</System:String>
             <System:String>к/ш</System:String>
             <System:String>с/ш</System:String>
             <System:String>д/ш</System:String>
         </ComboBox>
-        <ComboBox x:Name="SexCombobox" HorizontalAlignment="Left" Height="28" Margin="565,271,0,0" VerticalAlignment="Top" Width="173">
+        <ComboBox x:Name="SexCombobox" HorizontalAlignment="Left" Height="28" Margin="598,271,0,0" VerticalAlignment="Top" Width="184" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <System:String>м</System:String>
             <System:String>ж</System:String>
         </ComboBox>
-        <Button x:Name="PhotoButton" Content="Выбор фотографии" HorizontalAlignment="Left" Height="28" Margin="231,407,0,0" VerticalAlignment="Top" Width="308" Click="PhotoButton_Click">
+        <Button x:Name="PhotoButton" Content="Выбор фотографии" HorizontalAlignment="Left" Height="52" Margin="10,416,0,0" VerticalAlignment="Top" Width="357" Click="PhotoButton_Click" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Button.Background>
                 <ImageBrush ImageSource="button.png"/>
             </Button.Background>

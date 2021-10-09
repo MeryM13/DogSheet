@@ -6,191 +6,188 @@
         xmlns:local="clr-namespace:DogSheet"
         mc:Ignorable="d"
         Title="Ввод табличных данных" Height="490" Width="800" Closed="Window_Closed">
-    <Grid Height="400" Width="800" Margin="0,30,-8,0" VerticalAlignment="Top">
-        <Grid.Background>
-            <ImageBrush ImageSource="sumki-s-applikacijami-v-vide-siluetov-sobak-images-big.jpg"/>
-        </Grid.Background>
-        <TextBox x:Name="NumberTextbox" HorizontalAlignment="Left" Height="28" Margin="175,-4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+    <Grid Height="459" Width="800" Margin="0,0,-8,0" VerticalAlignment="Top">
+        <TextBox x:Name="NumberTextbox" HorizontalAlignment="Left" Height="28" Margin="215,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="CuratorTextbox" HorizontalAlignment="Left" Height="28" Margin="175,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="CuratorTextbox" HorizontalAlignment="Left" Height="28" Margin="215,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="PhoneTextbox" HorizontalAlignment="Left" Height="28" Margin="175,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="PhoneTextbox" HorizontalAlignment="Left" Height="28" Margin="215,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="CatchPlaceTextbox" HorizontalAlignment="Left" Height="28" Margin="175,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="CatchPlaceTextbox" HorizontalAlignment="Left" Height="28" Margin="215,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="TypeTextbox" HorizontalAlignment="Left" Height="28" Margin="175,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="TypeTextbox" HorizontalAlignment="Left" Height="28" Margin="215,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="ColorTextbox" HorizontalAlignment="Left" Height="28" Margin="175,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="ColorTextbox" HorizontalAlignment="Left" Height="28" Margin="215,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="AdditionalTextbox" HorizontalAlignment="Left" Height="28" Margin="175,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="AdditionalTextbox" HorizontalAlignment="Left" Height="28" Margin="215,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="PregnantTextbox" HorizontalAlignment="Left" Height="28" Margin="175,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="PregnantTextbox" HorizontalAlignment="Left" Height="28" Margin="215,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="TraumaTextbox" HorizontalAlignment="Left" Height="28" Margin="565,-4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="TraumaTextbox" HorizontalAlignment="Left" Height="28" Margin="592,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <Label Content="№ животного" HorizontalAlignment="Left" Height="28" Margin="42,-4,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="№ животного" HorizontalAlignment="Left" Height="28" Margin="38,20,0,0" VerticalAlignment="Top" Width="172" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Куратор" HorizontalAlignment="Left" Height="28" Margin="42,74,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Куратор" HorizontalAlignment="Left" Height="28" Margin="38,98,0,0" VerticalAlignment="Top" Width="172" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Телефон куратора" HorizontalAlignment="Left" Height="28" Margin="42,114,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Телефон куратора" HorizontalAlignment="Left" Height="28" Margin="38,138,0,0" VerticalAlignment="Top" Width="172" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Место отлова" HorizontalAlignment="Left" Height="28" Margin="42,153,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Место отлова" HorizontalAlignment="Left" Height="28" Margin="38,177,0,0" VerticalAlignment="Top" Width="172" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Вид" HorizontalAlignment="Left" Height="28" Margin="42,193,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Вид" HorizontalAlignment="Left" Height="28" Margin="38,217,0,0" VerticalAlignment="Top" Width="172" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Окрас" HorizontalAlignment="Left" Height="28" Margin="42,235,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Окрас" HorizontalAlignment="Left" Height="28" Margin="38,259,0,0" VerticalAlignment="Top" Width="172" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Приметы" HorizontalAlignment="Left" Height="28" Margin="42,277,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Приметы" HorizontalAlignment="Left" Height="28" Margin="38,301,0,0" VerticalAlignment="Top" Width="172" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Беременность" HorizontalAlignment="Left" Height="28" Margin="42,321,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Беременность" HorizontalAlignment="Left" Height="28" Margin="38,345,0,0" VerticalAlignment="Top" Width="172" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Травмы" HorizontalAlignment="Left" Height="28" Margin="430,-4,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Травмы" HorizontalAlignment="Left" Height="28" Margin="405,20,0,0" VerticalAlignment="Top" Width="182" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <TextBox x:Name="StPlaceTextbox" HorizontalAlignment="Left" Height="28" Margin="565,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="StPlaceTextbox" HorizontalAlignment="Left" Height="28" Margin="592,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="StDateTextbox" HorizontalAlignment="Left" Height="28" Margin="565,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="StDateTextbox" HorizontalAlignment="Left" Height="28" Margin="592,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="MarkTextbox" HorizontalAlignment="Left" Height="28" Margin="565,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="MarkTextbox" HorizontalAlignment="Left" Height="28" Margin="592,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="LabelTextbox" HorizontalAlignment="Left" Height="28" Margin="565,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="LabelTextbox" HorizontalAlignment="Left" Height="28" Margin="592,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="VacTextbox" HorizontalAlignment="Left" Height="28" Margin="565,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="VacTextbox" HorizontalAlignment="Left" Height="28" Margin="592,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="VacDateTextbox" HorizontalAlignment="Left" Height="28" Margin="565,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="VacDateTextbox" HorizontalAlignment="Left" Height="28" Margin="592,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="AwayTextbox" HorizontalAlignment="Left" Height="28" Margin="565,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="AwayTextbox" HorizontalAlignment="Left" Height="28" Margin="592,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="AwayDateTextbox" HorizontalAlignment="Left" Height="28" Margin="565,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="AwayDateTextbox" HorizontalAlignment="Left" Height="28" Margin="592,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <Label Content="Пункт стерилизации" HorizontalAlignment="Left" Height="28" Margin="430,35,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Пункт стерилизации" HorizontalAlignment="Left" Height="28" Margin="405,59,0,0" VerticalAlignment="Top" Width="182" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Дата стерилизации" HorizontalAlignment="Left" Height="28" Margin="430,74,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Дата стерилизации" HorizontalAlignment="Left" Height="28" Margin="405,98,0,0" VerticalAlignment="Top" Width="182" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Клеймо" HorizontalAlignment="Left" Height="28" Margin="430,114,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Клеймо" HorizontalAlignment="Left" Height="28" Margin="405,138,0,0" VerticalAlignment="Top" Width="182" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Бирка" HorizontalAlignment="Left" Height="28" Margin="430,153,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Бирка" HorizontalAlignment="Left" Height="28" Margin="405,177,0,0" VerticalAlignment="Top" Width="182" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Вакцина" HorizontalAlignment="Left" Height="28" Margin="430,193,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Вакцина" HorizontalAlignment="Left" Height="28" Margin="405,217,0,0" VerticalAlignment="Top" Width="182" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Дата вакцинации" HorizontalAlignment="Left" Height="28" Margin="430,235,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Дата вакцинации" HorizontalAlignment="Left" Height="28" Margin="405,259,0,0" VerticalAlignment="Top" Width="182" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Тип пристройства" HorizontalAlignment="Left" Height="28" Margin="430,277,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Тип пристройства" HorizontalAlignment="Left" Height="28" Margin="405,301,0,0" VerticalAlignment="Top" Width="182" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Label Content="Дата пристройства" HorizontalAlignment="Left" Height="28" Margin="430,321,0,0" VerticalAlignment="Top" Width="130">
+        <Label Content="Дата пристройства" HorizontalAlignment="Left" Height="28" Margin="405,345,0,0" VerticalAlignment="Top" Width="182" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>
         </Label>
-        <Button x:Name="ForwardButton" Content="Далее" HorizontalAlignment="Left" Height="24" Margin="231,366,0,0" VerticalAlignment="Top" Width="308" Click="ForwardButton_Click" RenderTransformOrigin="0.506,-2">
+        <Button x:Name="ForwardButton" Content="Далее" HorizontalAlignment="Left" Height="46" Margin="230,396,0,0" VerticalAlignment="Top" Width="308" Click="ForwardButton_Click" RenderTransformOrigin="0.506,-2" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Button.Background>
                 <ImageBrush ImageSource="button.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="CatchDateTextbox" HorizontalAlignment="Left" Height="28" Margin="175,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
+        <TextBox x:Name="CatchDateTextbox" HorizontalAlignment="Left" Height="28" Margin="215,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173">
             <TextBox.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </TextBox.Background>
         </TextBox>
-        <Label Content="Дата" HorizontalAlignment="Left" Height="28" Margin="42,35,0,0" VerticalAlignment="Top" Width="128">
+        <Label Content="Дата" HorizontalAlignment="Left" Height="28" Margin="38,59,0,0" VerticalAlignment="Top" Width="172" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Label.Background>
                 <ImageBrush ImageSource="tablet 3.png"/>
             </Label.Background>

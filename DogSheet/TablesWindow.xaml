@@ -14,16 +14,27 @@
             <ColumnDefinition Width="607*"/>
             <ColumnDefinition Width="185*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="ShortTableButton" Content="Краткая таблица" HorizontalAlignment="Left" Height="64" Margin="253,214,0,0" VerticalAlignment="Top" Width="286" Click="ShortTableButton_Click">
+        <Button x:Name="ShortTableButton" Content="Краткая таблица" HorizontalAlignment="Left" Height="64" Margin="140,218,0,0" VerticalAlignment="Top" Width="286" Click="ShortTableButton_Click" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Button.Background>
                 <ImageBrush ImageSource="button.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="FullTableButton" Content="Полная таблица" HorizontalAlignment="Left" Height="64" Margin="253,294,0,0" VerticalAlignment="Top" Width="286" Click="FullTableButton_Click">
+        <Button x:Name="FullTableButton" Content="Полная таблица" HorizontalAlignment="Left" Height="64" Margin="140,298,0,0" VerticalAlignment="Top" Width="286" Click="FullTableButton_Click" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Button.Background>
                 <ImageBrush ImageSource="button.png"/>
             </Button.Background>
         </Button>
+        <Button x:Name="ChangeFullButton" Content="Изменить" HorizontalAlignment="Left" Height="64" Margin="447,298,0,0" VerticalAlignment="Top" Width="166" Click="ChangeFullButton_Click" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
+            <Button.Background>
+                <ImageBrush ImageSource="button.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ChangeShortButton" Content="Изменить" HorizontalAlignment="Left" Height="64" Margin="447,218,0,0" VerticalAlignment="Top" Width="166" Click="ChangeShortButton_Click" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
+            <Button.Background>
+                <ImageBrush ImageSource="button.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Просмотр таблиц" HorizontalAlignment="Left" Margin="168,10,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="48" RenderTransformOrigin="0.459,0.531"/>
 
     </Grid>
 </Window>

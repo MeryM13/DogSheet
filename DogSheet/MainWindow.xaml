@@ -7,22 +7,25 @@
         mc:Ignorable="d"
         Title="Собачья таблица" Height="450" Width="800" Closing="Window_Closing">
     <Window.Background>
-        <ImageBrush ImageSource="kos.jpg"/>
+        <ImageBrush ImageSource="kos.jpg" Stretch="UniformToFill"/>
     </Window.Background>
-    <Grid Width="800" Height="400">
-        <Grid.Background>
-            <ImageBrush ImageSource="kos.jpg"/>
-        </Grid.Background>
-        <Button x:Name="DocsButton" Content="Создать отчет" HorizontalAlignment="Left" Height="72" Margin="236,187,0,0" VerticalAlignment="Top" Width="307" Click="DocsButton_Click">
+    <Grid Height="400" Margin="0,10,2,9">
+        <Button x:Name="DocsButton" Content="Создать отчет" HorizontalAlignment="Left" Height="72" Margin="10,210,0,0" VerticalAlignment="Top" Width="307" Click="DocsButton_Click" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Button.Background>
                 <ImageBrush ImageSource="button.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="TablesButton" Content="Просмотреть таблицы" HorizontalAlignment="Left" Height="72" Margin="236,284,0,0" VerticalAlignment="Top" Width="307" Click="TablesButton_Click">
+        <Button x:Name="TablesButton" Content="Просмотреть таблицы" HorizontalAlignment="Left" Height="72" Margin="473,210,0,0" VerticalAlignment="Top" Width="307" Click="TablesButton_Click" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
             <Button.Background>
                 <ImageBrush ImageSource="button.png"/>
             </Button.Background>
         </Button>
+        <Button Content="Изменить рабочую папку" HorizontalAlignment="Left" Margin="250,322,0,0" VerticalAlignment="Top" Width="307" Height="68" Click="Button_Click" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="16">
+            <Button.Background>
+                <ImageBrush ImageSource="button.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Собачья таблица" HorizontalAlignment="Left" Margin="194,10,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="48"/>
 
     </Grid>
 </Window>

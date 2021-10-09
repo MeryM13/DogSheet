@@ -16,17 +16,41 @@ namespace DogSheet
 
         private void ShortTableButton_Click(object sender, RoutedEventArgs e)
         {
-            _ = System.Diagnostics.Process.Start(MW.pathToShort);
+            try
+            {
+                _ = System.Diagnostics.Process.Start(MW.pathToShort);
+            }
+            catch
+            {
+                MW.ShortChoice();
+            }
         }
 
         private void FullTableButton_Click(object sender, RoutedEventArgs e)
         {
-            _ = System.Diagnostics.Process.Start(MW.pathToFull);
+            try
+            {
+                _ = System.Diagnostics.Process.Start(MW.pathToFull);
+            }
+            catch
+            {
+                MW.FullChoice();
+            }
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
             MW.Show();
+        }
+
+        private void ChangeShortButton_Click(object sender, RoutedEventArgs e)
+        {
+            MW.ShortChoice();
+        }
+
+        private void ChangeFullButton_Click(object sender, RoutedEventArgs e)
+        {
+            MW.FullChoice();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace DogSheet
             string head, string catcher, string category, string type, string sex, string breed, string color, string fur, string ears, string tail, string age,
             string weight, string additional, string chip, string awayDate)
         {
-            object filename = path + @"\Карточка учета №"+ animalNumber + ".docx";
+            object filename = path + @"\Карточка учета №" + animalNumber + ".docx";
 
             Word.Document doc;
             try
@@ -44,8 +44,8 @@ namespace DogSheet
             }
 
             table1.Cell(1, 1).Range.InlineShapes.AddPicture(photoPath);
-            table1.Cell(1, 2).Range.Text = "КАРТОЧКА\nУЧЕТА БЕЗНАДЗОРНОГО ЖИВОТНОГО\n№ " + animalNumber + "\n\n" 
-                + catchDate + "\n" +catchPlace;
+            table1.Cell(1, 2).Range.Text = "КАРТОЧКА\nУЧЕТА БЕЗНАДЗОРНОГО ЖИВОТНОГО\n№ " + animalNumber + "\n\n"
+                + catchDate + "\n" + catchPlace;
 
             paragraph1.Range.InsertParagraphAfter();
 

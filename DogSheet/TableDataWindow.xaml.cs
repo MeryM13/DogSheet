@@ -6,11 +6,11 @@ namespace DogSheet
 {
     public partial class TableDataWindow : Window                   //Окно для ввода данных, которые есть в первой таблице
     {
-        private TableWork TW;
+        private readonly TableWork TW;
         public DocsWindow DW;
         private AddDataWindow ADW;
 
-        private Excel.Range workRange;
+        private readonly Excel.Range workRange;
 
         public string[] data = new string[18];
 
