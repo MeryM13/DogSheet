@@ -1,5 +1,5 @@
 # DogSheet
-Ver. 0.5
+Ver. 0.6
 
 DogSheet (pun intentded) is a software created by a very specific commission for a local animal-care organization. 
 It should help the employees to fill all nessecary documents faster, leaving more time for their actual work.
